@@ -29,6 +29,8 @@ def generate_launch_description():
     )
 
     # Spawn the Robot #
+    declare_spawn_model_name = DeclareLaunchArgument("model_name", default_value="my_robot",
+                                                     description="Model Spawn Name")
     declare_spawn_x = DeclareLaunchArgument("x", default_value="0.0",
                                             description="Model Spawn X Axis Value")
     declare_spawn_y = DeclareLaunchArgument("y", default_value="0.0",
@@ -40,7 +42,7 @@ def generate_launch_description():
         executable="create",
         name="my_robot_spawn",
         arguments=[
-            "-name", "my_robot",
+            "-name", LaunchConfiguration("model_name"),
             "-allow_renaming", "true",
             "-topic", "robot_description",
             "-x", LaunchConfiguration("x"),
@@ -56,6 +58,7 @@ def generate_launch_description():
             # Sets use_sim_time for all nodes started below (doesn't work for nodes started from ignition gazebo) #
             SetParameter(name="use_sim_time", value=True),
             robot_state_publisher_node,
+            declare_spawn_model_name,
             declare_spawn_x,
             declare_spawn_y,
             declare_spawn_z,
