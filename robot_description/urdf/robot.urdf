@@ -18,7 +18,7 @@
 
         <visual>
             <geometry>
-                <box size="2 1.3 0.4" />
+                <mesh filename="package://robot_description/meshes/chassis.stl" />
             </geometry>
             <material name="DarkBlue">
                 <color rgba="0.2 0.2 0.4 1" />
@@ -104,8 +104,8 @@
         </collision>
         <visual>
             <origin rpy="1.5707 0 0" xyz="0 0.18 0" />
-            <geometry>
-                <cylinder length="0.12" radius="0.4"/>
+           <geometry>
+                <mesh filename="package://robot_description/meshes/wheel.stl" />
             </geometry>
             <material name="Black">
                 <color rgba="0.1 0.1 0.1 1" />
@@ -169,7 +169,7 @@
         <visual>
             <origin rpy="1.5707 0 0" xyz="0 -0.18 0" />
             <geometry>
-                <cylinder length="0.12" radius="0.4"/>
+                <mesh filename="package://robot_description/meshes/wheel.stl" />
             </geometry>
             <material name="Black">
                 <color rgba="0.1 0.1 0.1 1" />
