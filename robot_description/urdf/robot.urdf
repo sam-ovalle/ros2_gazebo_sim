@@ -2,6 +2,48 @@
 
 <robot name="robot">
 
+    <!-- Materials -->
+    <gazebo reference="link_chassis">
+        <visual>
+            <material> <!-- Blue -->
+                <ambient>0.0 0.0 1.0 1.0</ambient>
+                <diffuse>0.0 0.0 1.0 1.0</diffuse>
+                <specular>0.0 0.0 0.0 1.0</specular>
+                <emissive>0.0 0.0 0.0 1.0</emissive>
+            </material>
+        </visual>
+    </gazebo>
+    <gazebo reference="link_caster_wheel">
+        <visual>
+            <material> <!-- Gray -->
+                <ambient>0.25 0.25 0.25 1.0</ambient>
+                <diffuse>0.25 0.25 0.25 1.0</diffuse>
+                <specular>0.0 0.0 0.0 1.0</specular>
+                <emissive>0.0 0.0 0.0 1.0</emissive>
+            </material>
+        </visual>
+    </gazebo>
+    <gazebo reference="link_left_wheel">
+        <visual>
+            <material> <!-- Black -->
+                <ambient>0.1 0.1 0.1 1.0</ambient>
+                <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                <specular>0.0 0.0 0.0 1.0</specular>
+                <emissive>0.0 0.0 0.0 1.0</emissive>
+            </material>
+        </visual>
+    </gazebo>
+    <gazebo reference="link_right_wheel">
+        <visual>
+            <material> <!-- Black -->
+                <ambient>0.1 0.1 0.1 1.0</ambient>
+                <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                <specular>0.0 0.0 0.0 1.0</specular>
+                <emissive>0.0 0.0 0.0 1.0</emissive>
+            </material>
+        </visual>
+    </gazebo>
+
     <!-- Link - chassis -->
     <link name="link_chassis">
         <inertial>
