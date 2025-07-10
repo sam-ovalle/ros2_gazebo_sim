@@ -27,6 +27,7 @@ setup(
     entry_points={
         'console_scripts': [
             'display_odom = robot_description.display_odom:main',
+            'display_scan = robot_description.display_scan:main',
         ],
     },
 )
