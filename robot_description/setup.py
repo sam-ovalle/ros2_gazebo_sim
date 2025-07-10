@@ -28,6 +28,7 @@ setup(
         'console_scripts': [
             'display_odom = robot_description.display_odom:main',
             'display_scan = robot_description.display_scan:main',
+            'display_imu = robot_description.display_imu:main',
         ],
     },
 )
